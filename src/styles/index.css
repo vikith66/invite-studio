@@ -1,0 +1,27 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+.canvas-container,
+.lower-canvas,
+.upper-canvas {
+  background-color: transparent !important;
+}
+
+/* Fix Fabric.js hidden textarea causing page layout shift / workspace expansion */
+textarea[data-fabric="textarea"],
+textarea.fabric-textbox-hidden-textarea {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  overflow: hidden !important;
+  resize: none !important;
+}
